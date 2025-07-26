@@ -8,5 +8,5 @@ def buildArtifact()
 }
 def deployment(jobname,ip)
 {
-   sh "scp '/var/lib/jenkins/workspace/${jobname}/prac.py' ubuntu@${ip}:/home/ubuntu/App"
+   sh "scp -r /home/ubuntu/${jobname} ubuntu@${ip}:/home/ubuntu/App"
 }
