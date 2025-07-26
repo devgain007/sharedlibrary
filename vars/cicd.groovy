@@ -1,4 +1,5 @@
 def Gitdownload(repo)
 {
-    git branch: 'main', url: "https://github.com/devgain007/${repo}.git"
+   git credentialsId: 'github-creds', branch: 'main', url: "https://github.com/devgain007/${repo}.git"
+
 }
