@@ -13,3 +13,7 @@ scp -r "/var/lib/jenkins/workspace/${jobname}" ubuntu@${ip}:/home/ubuntu/App
 """
 
 }
+def testing(jobname)
+{
+  sh 'python3 "/var/lib/jenkins/workspace/${jobname}/prac.py"'
+}
