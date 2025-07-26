@@ -6,14 +6,12 @@ def buildArtifact()
 {
   sh 'python3'
 }
-def deployment(jobname,ip)
-{
-sh """ 
-scp -r "/var/lib/jenkins/workspace/${jobname}" ubuntu@${ip}:/home/ubuntu/App
-"""
-
+def deployment(jobname, ip) {
+    sh "scp \"/var/lib/jenkins/workspace/${jobname}/prac.py\" ubuntu@${ip}:/etc/tomcat10/prac.py"
 }
-def testing(jobname) {
+
+def testing(jobname)
+{
     sh "python3 /var/lib/jenkins/workspace/${jobname}/prac.py"
 }
 
