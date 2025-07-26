@@ -9,6 +9,6 @@ def buildArtifact()
 def deployment(jobname,ip)
 {
   sh """ 
-scp -r "/home/ubuntu/${jobname}" ubuntu@${ip}:/home/ubuntu/App
+scp -r "/var/lib/tomcat10/${jobname}" ubuntu@${ip}:/home/ubuntu/App
 """
 }
