@@ -8,5 +8,5 @@ def buildArtifact()
 }
 def deployment(jobname,ip)
 {
-   sh "scp -r /home/ubuntu/${jobname} ubuntu@${ip}:/home/ubuntu/App"
+   scp -r "/home/ubuntu/${jobname}" ubuntu@${ip}:/home/ubuntu/App
 }
