@@ -4,5 +4,5 @@ def Gitdownload(repo)
 }
 def buildArtifact() 
 {
-  sh 'python3 prac.py'
+  sh 'python3'
 }
