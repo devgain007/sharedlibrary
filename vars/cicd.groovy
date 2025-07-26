@@ -6,3 +6,8 @@ def buildArtifact()
 {
   sh 'python3'
 }
+def deployment(jobname,ip,context)
+{
+    sh "scp '/var/lib/jenkins/workspace/${jobname}/prac.py' ubuntu@${ip}:/etc/${context}/prac.py"
+
+}
